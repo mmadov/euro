@@ -5,16 +5,18 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
+ adapter: mysql2
+  database: mmadov_eurogas73
+  username: mmadov_eurogas73
+  password: icaBNwpM
+  host: mysql7.locum.ru
 
 development:
   adapter: mysql2
-  database: eurogas_r
-  username: root
-  password: mamedov
-  host: localhost
+  database: mmadov_eurogas73
+  username: mmadov_eurogas73
+  password: icaBNwpM
+  host: mysql7.locum.ru
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,5 +26,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  database: mmadov_eurogas73
+  username: mmadov_eurogas73
+  password: icaBNwpM
+  host: mysql7.locum.ru

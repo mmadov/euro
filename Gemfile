@@ -1,6 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
-
 gem "rails_12factor", group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -47,7 +45,6 @@ group :development do
    gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
-  gem 'capistrano-rvm'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'

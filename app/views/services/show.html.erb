@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name az:</strong>
+  <%= @service.name_az %>
+</p>
+
+<p>
+  <strong>Name en:</strong>
+  <%= @service.name_en %>
+</p>
+
+<p>
+  <strong>Name ru:</strong>
+  <%= @service.name_ru %>
+</p>
+
+<p>
+  <strong>Desc az:</strong>
+  <%= @service.desc_az %>
+</p>
+
+<p>
+  <strong>Desc ru:</strong>
+  <%= @service.desc_ru %>
+</p>
+
+<p>
+  <strong>Desc en:</strong>
+  <%= @service.desc_en %>
+</p>
+
+<p>
+  <strong>About az:</strong>
+  <%= @service.about_az %>
+</p>
+
+<p>
+  <strong>About ru:</strong>
+  <%= @service.about_ru %>
+</p>
+
+<p>
+  <strong>About en:</strong>
+  <%= @service.about_en %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @service.img %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

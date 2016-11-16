@@ -1,0 +1,46 @@
+<%= form_for(about) do |f| %>
+  <% if about.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(about.errors.count, "error") %> prohibited this about from being saved:</h2>
+
+      <ul>
+      <% about.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :about_az %>
+    <%= f.text_area :about_az %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :desc_az %>
+    <%= f.text_area :desc_az %>
+  </div>
+
+  <div class="field">
+    <%= f.label :about_ru %>
+    <%= f.text_area :about_ru %>
+  </div>
+    <div class="field">
+    <%= f.label :desc_ru %>
+    <%= f.text_area :desc_ru %>
+  </div>
+
+  <div class="field">
+    <%= f.label :about_en %>
+    <%= f.text_area :about_en %>
+  </div>
+    <div class="field">
+    <%= f.label :desc_en %>
+    <%= f.text_area :desc_en %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

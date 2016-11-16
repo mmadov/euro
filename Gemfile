@@ -42,7 +42,10 @@ end
 
 
 group :development do
-    gem 'capistrano', github: 'capistrano/capistrano', ref: '96a16'
+      gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'

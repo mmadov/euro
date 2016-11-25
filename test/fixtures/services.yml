@@ -1,25 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name_az: MyString
-  name_en: MyString
-  name_ru: MyString
-  desc_az: MyString
-  desc_ru: MyString
-  desc_en: MyString
-  about_az: MyText
-  about_ru: MyText
-  about_en: MyText
-  img: MyString
+  name: MyString
+  desc: MyString
+  text: MyText
+  image: MyString
+  main: 1.5
+  locale: MyString
 
 two:
-  name_az: MyString
-  name_en: MyString
-  name_ru: MyString
-  desc_az: MyString
-  desc_ru: MyString
-  desc_en: MyString
-  about_az: MyText
-  about_ru: MyText
-  about_en: MyText
-  img: MyString
+  name: MyString
+  desc: MyString
+  text: MyText
+  image: MyString
+  main: 1.5
+  locale: MyString

@@ -17,7 +17,7 @@ class AboutsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create about" do
     assert_difference('About.count') do
-      post abouts_url, params: { about: { about_az: @about.about_az, about_en: @about.about_en, about_ru: @about.about_ru } }
+      post abouts_url, params: { about: { categ: @about.categ, desc: @about.desc, locale: @about.locale, name: @about.name, text: @about.text } }
     end
 
     assert_redirected_to about_url(About.last)
@@ -34,7 +34,7 @@ class AboutsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update about" do
-    patch about_url(@about), params: { about: { about_az: @about.about_az, about_en: @about.about_en, about_ru: @about.about_ru } }
+    patch about_url(@about), params: { about: { categ: @about.categ, desc: @about.desc, locale: @about.locale, name: @about.name, text: @about.text } }
     assert_redirected_to about_url(@about)
   end
 

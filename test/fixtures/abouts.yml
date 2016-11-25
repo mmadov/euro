@@ -1,11 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  about_az: MyText
-  about_ru: MyText
-  about_en: MyText
+  name: MyString
+  desc: MyString
+  text: MyText
+  categ: 1
+  locale: MyString
 
 two:
-  about_az: MyText
-  about_ru: MyText
-  about_en: MyText
+  name: MyString
+  desc: MyString
+  text: MyText
+  categ: 1
+  locale: MyString

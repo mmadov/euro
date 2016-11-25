@@ -12,32 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :about_az %>
-    <%= f.text_area :about_az %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :desc_az %>
-    <%= f.text_area :desc_az %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :about_ru %>
-    <%= f.text_area :about_ru %>
-  </div>
-    <div class="field">
-    <%= f.label :desc_ru %>
-    <%= f.text_area :desc_ru %>
+    <%= f.label :desc %>
+    <%= f.text_field :desc %>
   </div>
 
   <div class="field">
-    <%= f.label :about_en %>
-    <%= f.text_area :about_en %>
+    <%= f.label :text %>
+    <%= f.text_area :text %>
   </div>
-    <div class="field">
-    <%= f.label :desc_en %>
-    <%= f.text_area :desc_en %>
+
+  <div class="field">
+    <%= f.label :categ %>
+    <%= f.number_field :categ %>
+  </div>
+
+  <div class="field">
+    <%= f.label :locale %>
+    <%= f.text_field :locale %>
   </div>
 
   <div class="actions">

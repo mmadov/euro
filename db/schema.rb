@@ -10,30 +10,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114100235) do
+ActiveRecord::Schema.define(version: 20161121183337) do
 
   create_table "abouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.text     "about_az",   limit: 65535
-    t.text     "about_ru",   limit: 65535
-    t.text     "about_en",   limit: 65535
+    t.string   "name"
+    t.string   "desc"
+    t.text     "text",       limit: 65535
+    t.integer  "categ"
+    t.string   "locale"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.text     "desc_az",    limit: 65535
-    t.text     "desc_ru",    limit: 65535
-    t.text     "desc_en",    limit: 65535
+  end
+
+  create_table "locales", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pagenames", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "name"
+    t.string   "desc"
+    t.text     "text",        limit: 65535
+    t.integer  "pagename_id"
+    t.string   "locale_code"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "services", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "name_az"
-    t.string   "name_en"
-    t.string   "name_ru"
-    t.string   "desc_az"
-    t.string   "desc_ru"
-    t.string   "desc_en"
-    t.text     "about_az",   limit: 65535
-    t.text     "about_ru",   limit: 65535
-    t.text     "about_en",   limit: 65535
-    t.string   "img"
+    t.string   "name"
+    t.string   "desc"
+    t.text     "text",       limit: 65535
+    t.string   "image"
+    t.float    "main",       limit: 24
+    t.string   "locale"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "works", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "name"
+    t.string   "desc"
+    t.text     "text",       limit: 65535
+    t.string   "image"
+    t.string   "locale"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

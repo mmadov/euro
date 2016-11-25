@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @page.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @page.desc %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @page.text %>
+</p>
+
+<p>
+  <strong>Pagename:</strong>
+  <%= @page.pagename_id %>
+</p>
+
+<p>
+  <strong>Locale code:</strong>
+  <%= @page.locale_code %>
+</p>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

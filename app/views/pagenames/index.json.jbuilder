@@ -1,0 +1,1 @@
+json.array! @pagenames, partial: 'pagenames/pagename', as: :pagename

@@ -1,18 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>About az:</strong>
-  <%= @about.about_az %>
+  <strong>Name:</strong>
+  <%= @about.name %>
 </p>
 
 <p>
-  <strong>About ru:</strong>
-  <%= @about.about_ru %>
+  <strong>Desc:</strong>
+  <%= @about.desc %>
 </p>
 
 <p>
-  <strong>About en:</strong>
-  <%= @about.about_en %>
+  <strong>Text:</strong>
+  <%= @about.text %>
+</p>
+
+<p>
+  <strong>Categ:</strong>
+  <%= @about.categ %>
+</p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @about.locale %>
 </p>
 
 <%= link_to 'Edit', edit_about_path(@about) %> |

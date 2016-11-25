@@ -1,0 +1,2 @@
+module PagenamesHelper
+end

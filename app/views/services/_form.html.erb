@@ -12,53 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name_az %>
-    <%= f.text_field :name_az %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :name_en %>
-    <%= f.text_field :name_en %>
+    <%= f.label :desc %>
+    <%= f.text_field :desc %>
   </div>
 
   <div class="field">
-    <%= f.label :name_ru %>
-    <%= f.text_field :name_ru %>
+    <%= f.label :text %>
+    <%= f.text_area :text %>
   </div>
 
   <div class="field">
-    <%= f.label :desc_az %>
-    <%= f.text_field :desc_az %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
   </div>
 
   <div class="field">
-    <%= f.label :desc_ru %>
-    <%= f.text_field :desc_ru %>
+    <%= f.label :main %>
+    <%= f.text_field :main %>
   </div>
 
   <div class="field">
-    <%= f.label :desc_en %>
-    <%= f.text_field :desc_en %>
-  </div>
-
-  <div class="field">
-    <%= f.label :about_az %>
-    <%= f.text_area :about_az %>
-  </div>
-
-  <div class="field">
-    <%= f.label :about_ru %>
-    <%= f.text_area :about_ru %>
-  </div>
-
-  <div class="field">
-    <%= f.label :about_en %>
-    <%= f.text_area :about_en %>
-  </div>
-
-  <div class="field">
-    <%= f.label :img %>
-    <%= f.text_field :img %>
+    <%= f.label :locale %>
+    <%= f.text_field :locale %>
   </div>
 
   <div class="actions">

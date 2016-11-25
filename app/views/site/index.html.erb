@@ -1,1 +1,228 @@
-ss
+<% @test=I18n.locale %>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideoTransitions = [
+              [{b:-1,d:1,o:-1},{b:0,d:1000,o:1}],
+              [{b:1900,d:2000,x:-379,e:{x:7}}],
+              [{b:1900,d:2000,x:-379,e:{x:7}}],
+              [{b:-1,d:1,o:-1,r:288,sX:9,sY:9},{b:1000,d:900,x:-1400,y:-660,o:1,r:-288,sX:-9,sY:-9,e:{r:6}},{b:1900,d:1600,x:-200,o:-1,e:{x:16}}]
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideDuration: 800,
+              $SlideEasing: $Jease$.$OutQuint,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1920);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script>
+    <style>
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 22 css */
+        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        .jssora22l.jssora22lds      (disabled)
+        .jssora22r.jssora22rds      (disabled)
+        */
+        .jssora22l, .jssora22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 58px;
+            cursor: pointer;
+            background: url('img/a22.png') center center no-repeat;
+            overflow: hidden;
+        }
+        .jssora22l { background-position: -10px -31px; }
+        .jssora22r { background-position: -70px -31px; }
+        .jssora22l:hover { background-position: -130px -31px; }
+        .jssora22r:hover { background-position: -190px -31px; }
+        .jssora22l.jssora22ldn { background-position: -250px -31px; }
+        .jssora22r.jssora22rdn { background-position: -310px -31px; }
+        .jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
+        .jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+    </style>
+    <div class="test"></div>
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+            <div data-p="225.00">
+                <img data-u="image" src="/PVC-Water-Supply-Series2-Banner.jpg" />
+                
+            </div>
+            <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
+            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="/featured-32.jpg" />
+            </div>
+         
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+    </div>
+    <div class="vc_row wpb_row vc_row-fluid" style="background: url('https://www.rbit360.com/images/landingpage/world-map.png');
+"><div class="container" style="height:750px;"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-12"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 style="font-size: 30px;line-height: 30px;text-align: left" class="vc_custom_heading">Haqqımızda</h3><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1464775585539-965828e6-a8ee" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1464775585539-965828e6-a8ee" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Şirkət haqqında</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+    <div class="wpb_text_column wpb_content_element ">
+        <div class="wpb_wrapper">
+        <%      @about = About.where(locale:I18n.locale,categ:"1").first
+%>
+<%= I18n.locale %>
+            <p><%=  @about.desc %></p>
+
+        </div>
+    </div>
+</div></div><div class="vc_tta-panel" id="1464775585604-96a3e2c8-94ad" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1464775585604-96a3e2c8-94ad" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Fəaliyyət tarixi</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+    <div class="wpb_text_column wpb_content_element ">
+        <div class="wpb_wrapper">
+           <%      @about = About.where(locale:I18n.locale,categ:"2").first
+%>
+<%= I18n.locale %>
+            <p><%=  @about.text %></p>
+        </div>
+    </div>
+</div></div><div class="vc_tta-panel" id="1464775675561-e456c3fe-8fe3" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1464775675561-e456c3fe-8fe3" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Partnyorlar</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+    <div class="wpb_text_column wpb_content_element ">
+        <div class="wpb_wrapper">
+             <%      @about = About.where(locale:I18n.locale,categ:"3").first
+%>
+<%= I18n.locale %>
+            <p><%=  @about.text %></p>
+        </div>
+    </div>
+</div></div><div class="vc_tta-panel" id="1464775585604-96a3e2c8-5555" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1464775585604-96a3e2c8-5555" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Misiyamiz</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+    <div class="wpb_text_column wpb_content_element ">
+        <div class="wpb_wrapper">
+           <%      @about = About.where(locale:I18n.locale,categ:"4").first
+%>
+<%= I18n.locale %>
+            <p><%=  @about.text %></p>
+        </div>
+    </div>
+</div></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-12"><div class="vc_column-inner "><div class="wpb_wrapper">     <div class="latestblog-section">
+            <div class="section-header"><h3>İşlərimiz</h3></div>           
+              <% @works.each do |work| %>
+                  <div class="type-post" style="background: #fff;">
+                        <div class="entry-cover">
+                            <div class="post-img">
+                                <img src="<%= work.image %>" class="attachment-manufactory-250-160 size-manufactory-250-160 wp-post-image" alt="blog-5" width="250" height="160"> 
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                        <div class="entry-block">
+                            <div class="entry-title">
+                                <a href="#">
+                                    <h3><%= work.name %></h3>                                </a>
+                            </div>
+                           
+                            <div class="entry-content">
+                                <p><%= work.desc %></p>
+                            </div>
+                            <a class="single-read-more" href="#">Read More<span class="arrow_right" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                    <% end %>
+                       
+        </div></div></div></div></div>
+        <div class="container-fuild no-padding testimonial-section ">
+
+        <div class="container features-section ">
+            <div class="row">
+                
+                      <% @services.each do |service| %>
+
+        <div class="col-md-4 col-sm-6 col-xs-6 introdction-block ">
+            <img src="<%= service.image %>" class="attachment-manufactory-370-281 size-manufactory-370-281" alt="slider-4.jpg" width="370" height="281">
+            <h3><a href="#"><%= service.name %></a></h3>
+            <span><%= service.desc %></span>
+        </div>
+        <% end %>
+            </div>
+        </div>
+        </div>   
+        
+        <div class="container-fuild no-padding client-section " style="background-color: #1B75BB;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <h3>Partnorlarımız</h3>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-12">
+                        <div class="client-logo-block owl-carousel owl-theme owl-loaded">
+                           <% @partners.each do |partner| %>
+  <div class="item"><img src="<%= partner.logo %>"></div>
+<% end %>
+        </div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div style="display: none;" class="owl-dots"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+

@@ -128,69 +128,7 @@
         <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
     </div>
-    <div class="vc_row wpb_row vc_row-fluid" style="background: url('https://www.rbit360.com/images/landingpage/world-map.png');
-"><div class="container" style="height:750px;"><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-12"><div class="vc_column-inner "><div class="wpb_wrapper"><h3 style="font-size: 30px;line-height: 30px;text-align: left" class="vc_custom_heading">Haqqımızda</h3><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1464775585539-965828e6-a8ee" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1464775585539-965828e6-a8ee" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Şirkət haqqında</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
-    <div class="wpb_text_column wpb_content_element ">
-        <div class="wpb_wrapper">
-        <%      @about = About.where(locale:I18n.locale,categ:"1").first
-%>
-<%= I18n.locale %>
-            <p><%=  @about.desc %></p>
-
-        </div>
-    </div>
-</div></div><div class="vc_tta-panel" id="1464775585604-96a3e2c8-94ad" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1464775585604-96a3e2c8-94ad" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Fəaliyyət tarixi</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
-    <div class="wpb_text_column wpb_content_element ">
-        <div class="wpb_wrapper">
-           <%      @about = About.where(locale:I18n.locale,categ:"2").first
-%>
-<%= I18n.locale %>
-            <p><%=  @about.text %></p>
-        </div>
-    </div>
-</div></div><div class="vc_tta-panel" id="1464775675561-e456c3fe-8fe3" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1464775675561-e456c3fe-8fe3" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Partnyorlar</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
-    <div class="wpb_text_column wpb_content_element ">
-        <div class="wpb_wrapper">
-             <%      @about = About.where(locale:I18n.locale,categ:"3").first
-%>
-<%= I18n.locale %>
-            <p><%=  @about.text %></p>
-        </div>
-    </div>
-</div></div><div class="vc_tta-panel" id="1464775585604-96a3e2c8-5555" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1464775585604-96a3e2c8-5555" data-vc-accordion="" data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Misiyamiz</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
-    <div class="wpb_text_column wpb_content_element ">
-        <div class="wpb_wrapper">
-           <%      @about = About.where(locale:I18n.locale,categ:"4").first
-%>
-<%= I18n.locale %>
-            <p><%=  @about.text %></p>
-        </div>
-    </div>
-</div></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-12"><div class="vc_column-inner "><div class="wpb_wrapper">     <div class="latestblog-section">
-            <div class="section-header"><h3>İşlərimiz</h3></div>           
-              <% @works.each do |work| %>
-                  <div class="type-post" style="background: #fff;">
-                        <div class="entry-cover">
-                            <div class="post-img">
-                                <img src="<%= work.image %>" class="attachment-manufactory-250-160 size-manufactory-250-160 wp-post-image" alt="blog-5" width="250" height="160"> 
-                                <a href="#"></a>
-                            </div>
-                        </div>
-                        <div class="entry-block">
-                            <div class="entry-title">
-                                <a href="#">
-                                    <h3><%= work.name %></h3>                                </a>
-                            </div>
-                           
-                            <div class="entry-content">
-                                <p><%= work.desc %></p>
-                            </div>
-                            <a class="single-read-more" href="#">Read More<span class="arrow_right" aria-hidden="true"></span></a>
-                        </div>
-                    </div>
-                    <% end %>
-                       
-        </div></div></div></div></div>
+   
         <div class="container-fuild no-padding testimonial-section ">
 
         <div class="container features-section ">

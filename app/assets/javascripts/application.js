@@ -11,11 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require turbolinks
 
-//= require_tree .
 $(document).ready(function(){
   $('.bxslider').bxSlider();
 });

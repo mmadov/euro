@@ -1,37 +1,52 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Services</h1>
+    <div class="container-fluid no-padding pagebanner" style="background-image: url(http://lolthemes.com/demo/wpm/manufactory/wp-content/themes/manufactory/images/page-banner.jpg);">
+    <div class="page-banner-inner">
+      <div class="container">
+        <h3>
+          Xidmetler        </h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid no-padding page-breadcrumb">
+    <div class="container">
+                <div class="breadcrumb">
+            <!-- Breadcrumb NavXT 5.5.2 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Manufactory." href="/" class="home"><span property="name">Ana sehife</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name">Xidmetler</span><meta property="position" content="2"></span>          </div>
+              </div>
+  </div>
+  
+<main id="main" class="site-main no-padding no-margin">
+  <div class="page-content">    
+    <div class="container">
+      <div class="row">
+        <div class="content-area full-content col-md-12 no-padding">
+          <div id="post-45" class="post-45 page type-page status-publish hentry">
+    <div class="entry-content">
+    <div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"> 
+  <div class="container weare-section">
+        <div class="row">
+                
+          <% @services.each do |service| %>
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+            <div class="weare-box">
+              <img src="<%= service.image %>" class="attachment-manufactory-370-306 size-manufactory-370-306 wp-post-image" alt="service-detail-2" width="360" height="306">             <div class="weare-content">
+                <h3><a href="/services/<%= service.id %>"><%= service.name %></a></h3>
+                
+                <p><%= service.desc %></p>
+              </div>
+            </div>
+          </div>
+                   <% end %>
+            
+    </div>
+  </div>
+  </div></div></div></div>
+      </div>
+</div>        </div>
+              </div>
+    </div>
+  </div>
+</main>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Desc</th>
-      <th>Text</th>
-      <th>Image</th>
-      <th>Main</th>
-      <th>Locale</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @services.each do |service| %>
-      <tr>
-        <td><%= service.name %></td>
-        <td><%= service.desc %></td>
-        <td><%= service.text %></td>
-        <td><%= service.image %></td>
-        <td><%= service.main %></td>
-        <td><%= service.locale %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Service', new_service_path %>
+    

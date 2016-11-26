@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :partners
   resources :works
   	  resources :abouts
+      resources :contact
+      resources :career
 
   resources :services
   root to: 'site#index'

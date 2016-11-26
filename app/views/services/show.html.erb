@@ -1,34 +1,49 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @service.name %>
-</p>
+    <div class="container-fluid no-padding pagebanner" style="background-image: url(<%= @service.image %>);">
+    <div class="page-banner-inner">
+      <div class="container">
+        <h3>
+          <%= @service.name %>        </h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid no-padding page-breadcrumb">
+    <div class="container">
+             <div class="breadcrumb">
+            <!-- Breadcrumb NavXT 5.5.2 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Manufactory." href="/" class="home"><span property="name">Ana sehife</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Service." href="/services" class="post post-manufactor_service-archive"><span property="name">Xidmetler</span></a><meta property="position" content="2"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name"><%= @service.name %></span><meta property="position" content="3"></span>          </div>
+              </div>
+  </div>
+  
+<main id="main" class="site-main no-padding no-margin">
+  <div class="page-content">    
+    <div class="container">
+      <div class="row">
+        <div class="content-area full-content col-md-12 no-padding">
+          <div id="post-45" class="post-45 page type-page status-publish hentry">
+    <div class="entry-content">
+    <div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"> 
+  <div class="container weare-section">
+        <div class="row">
+       
+         
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                    
+                    <div class="section-header">
+                    <h3><%= @service.name %> </h3>                 </div>
+              <p><%= @service.text %></p>      
+          </div>
+           
+            
+    </div>
+  </div>
+  </div></div></div></div>
+      </div>
+</div>        </div>
+              </div>
+    </div>
+  </div>
+</main>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @service.desc %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @service.text %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @service.image %>
-</p>
-
-<p>
-  <strong>Main:</strong>
-  <%= @service.main %>
-</p>
-
-<p>
-  <strong>Locale:</strong>
-  <%= @service.locale %>
-</p>
-
-<%= link_to 'Edit', edit_service_path(@service) %> |
-<%= link_to 'Back', services_path %>
+    

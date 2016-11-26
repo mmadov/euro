@@ -331,48 +331,29 @@ var simpleLikes = {"ajaxurl":"http:\/\/lolthemes.com\/demo\/wpm\/manufactory\/wp
         
 
      <footer class="footer-main container-fluid no-padding">
-      <div class="container">
-        <div class="row">
-                        <div class="col-md-3 col-sm-6 col-xs-6 ftr-widget about-widget">
-                <aside id="text-2" class="widget widget_text"><h3>About Us</h3>     <div class="textwidget"><p>At vero eos et accusamus et iusto elity lit agnissmos ducimus quidtiis praesetium ptatum mole deeniti. Ducimus os quidtiis praesetium ptatum mole deeniti hates lites fortune .</p>
+<div class="container-fuild no-padding client-section " style="background-color: #1B75BB;padding:0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <h3>Partnorlarımız</h3>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-12">
+                        <div class="client-logo-block owl-carousel owl-theme owl-loaded">
+                           <% @partners.each do |partner| %>
+  <div class="item"><img src="<%= partner.logo %>"></div>
+<% end %>
+        </div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div style="display: none;" class="owl-dots"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<a href="#">Learn More</a></div>
-    </aside>              </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6 ftr-widget link-widget">
-                <aside id="nav_menu-2" class="widget widget_nav_menu"><h3>Solution</h3><div class="menu-solution-footer-menu-container"><ul id="menu-solution-footer-menu" class="menu"><li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-manufactor_service menu-item-265"><a href="#">Agricultural Processing</a></li>
-<li id="menu-item-266" class="menu-item menu-item-type-post_type menu-item-object-manufactor_service menu-item-266"><a href="#">Coal &amp; Solid Fuels</a></li>
-<li id="menu-item-267" class="menu-item menu-item-type-post_type menu-item-object-manufactor_service menu-item-267"><a href="#">Industrial Chemicals</a></li>
-<li id="menu-item-268" class="menu-item menu-item-type-post_type menu-item-object-manufactor_service menu-item-268"><a href="#">Machinery &amp; Tools</a></li>
-<li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-manufactor_service menu-item-269"><a href="#">Oil and Gas Revolution</a></li>
-</ul></div></aside>             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6 ftr-widget contact-widget">
-                <aside id="widget_contactus-2" class="widget widget-contact"><h3>Keep in touch</h3>             
-    <div class="about-text">
-                <p>
-            <span class="icon icon-Pointer"></span>
-            Address :           44 New Design Street, Melbourne 005         </p>
-                    <p>
-            <span class="icon icon-Phone2"></span>
-            Phone :           
-            <a href="tel:(01)-800-433-633">(01) 800 433 633</a>
-          </p>
-                    <p>
-            <span class="icon icon-Mail"></span>
-            Email :           <a href="mailto:info@anous.com">info@anous.com</a>
-          </p>
-                    <p>
-            <span class="icon icon-Printer"></span>
-            Fax :           
-            <a href="tel:(01)-800-854-633">(01) 800 854 633</a>
-          </p>
-              </div>
-    
-    </aside>              </div>
-                           
-                      </div>
-      </div>
-      <div class="footer-bottom" style="background-color: #1B75BB;">
+      <div class="footer-bottom" style="background-color: #303031;">
         <div class="container">
+        <style>
+        .footer-bottom .container::before {
+          background: #1B75BB;}
+          </style>
           <div class="col-md-6 col-sm-12 col-xs-12  no-padding copyright-section">
             <p style="color:#fff">Copyrights © 2016 All Rights Reserved</p>
           </div>
